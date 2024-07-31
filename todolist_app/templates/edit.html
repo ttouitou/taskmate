@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>Edit Task- Taskmate</title>
+{% endblock title %} 
+
+{% block content %}
+<div class="container">
+
+    <br>
+
+    <form method="POST">
+        {% csrf_token %}
+        <div class="row">
+         <label class="col-lg-2 col-form-label"></label>
+         <div class="col-lg-6">
+          <input type="text" class="form-control" name="task" placeholder= "{{task_obj.task}}" value={{task_obj.task}}"">
+         </div>
+         <div class="col-lg-2">
+          <button type="submit" class="btn btn-primary">Update Task</button>
+         </div>
+        </div>
+       </form>
+
+</div>
+{% endblock content %}
